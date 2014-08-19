@@ -1,4 +1,4 @@
-package com.jeremyfeinstein.slidingmenu.lib;
+package com.slidingmenu.lib;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;

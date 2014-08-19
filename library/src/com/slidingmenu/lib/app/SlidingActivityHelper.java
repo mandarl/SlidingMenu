@@ -1,4 +1,4 @@
-package com.jeremyfeinstein.slidingmenu.lib.app;
+package com.slidingmenu.lib.app;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 
-import com.jeremyfeinstein.slidingmenu.lib.R;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.slidingmenu.lib.R;
+import com.slidingmenu.lib.SlidingMenu;
 
 public class SlidingActivityHelper {
 
@@ -51,15 +51,16 @@ public class SlidingActivityHelper {
 	 * @param savedInstanceState the saved instance state (unused)
 	 */
 	public void onPostCreate(Bundle savedInstanceState) {
-		if (mViewBehind == null || mViewAbove == null) {
+		//if (mViewBehind == null || mViewAbove == null) {
+		if (mViewAbove == null) {
 			throw new IllegalStateException("Both setBehindContentView must be called " +
 					"in onCreate in addition to setContentView.");
 		}
 
 		mOnPostCreateCalled = true;
 
-		mSlidingMenu.attachToActivity(mActivity, 
-				mEnableSlide ? SlidingMenu.SLIDING_WINDOW : SlidingMenu.SLIDING_CONTENT);
+//		mSlidingMenu.attachToActivity(mActivity, 
+//				mEnableSlide ? SlidingMenu.SLIDING_WINDOW : SlidingMenu.SLIDING_CONTENT);
 		
 		final boolean open;
 		final boolean secondary;

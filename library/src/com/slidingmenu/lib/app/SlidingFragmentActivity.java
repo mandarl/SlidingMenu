@@ -1,4 +1,4 @@
-package com.jeremyfeinstein.slidingmenu.lib.app;
+package com.slidingmenu.lib.app;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -6,9 +6,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
+import com.slidingmenu.lib.SlidingMenu;
 
-public class SlidingFragmentActivity extends FragmentActivity implements SlidingActivityBase {
+public class SlidingFragmentActivity extends RoboSherlockFragmentActivity implements SlidingActivityBase {
 
 	private SlidingActivityHelper mHelper;
 
@@ -77,63 +78,63 @@ public class SlidingFragmentActivity extends FragmentActivity implements Sliding
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(int)
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(int)
 	 */
 	public void setBehindContentView(int id) {
 		setBehindContentView(getLayoutInflater().inflate(id, null));
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(android.view.View)
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(android.view.View)
 	 */
 	public void setBehindContentView(View v) {
 		setBehindContentView(v, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(android.view.View, android.view.ViewGroup.LayoutParams)
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#setBehindContentView(android.view.View, android.view.ViewGroup.LayoutParams)
 	 */
 	public void setBehindContentView(View v, LayoutParams params) {
 		mHelper.setBehindContentView(v, params);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#getSlidingMenu()
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#getSlidingMenu()
 	 */
 	public SlidingMenu getSlidingMenu() {
 		return mHelper.getSlidingMenu();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#toggle()
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#toggle()
 	 */
 	public void toggle() {
 		mHelper.toggle();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#showAbove()
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#showAbove()
 	 */
 	public void showContent() {
 		mHelper.showContent();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#showBehind()
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#showBehind()
 	 */
 	public void showMenu() {
 		mHelper.showMenu();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#showSecondaryMenu()
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#showSecondaryMenu()
 	 */
 	public void showSecondaryMenu() {
 		mHelper.showSecondaryMenu();
 	}
 
 	/* (non-Javadoc)
-	 * @see com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase#setSlidingActionBarEnabled(boolean)
+	 * @see com.slidingmenu.lib.app.SlidingActivityBase#setSlidingActionBarEnabled(boolean)
 	 */
 	public void setSlidingActionBarEnabled(boolean b) {
 		mHelper.setSlidingActionBarEnabled(b);
