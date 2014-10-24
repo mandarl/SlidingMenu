@@ -1,9 +1,11 @@
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile 'com.android.support:support-v4:20.0.0'
+    compile rootProject.supportV4
     compile 'com.viewpagerindicator:library:2.4.1@aar'
-    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile ('com.actionbarsherlock:actionbarsherlock:4.4.0@aar'){
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
     compile 'com.github.rtyley:roboguice-sherlock:1.5'
 }
 
